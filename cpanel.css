@@ -1,0 +1,361 @@
+:root{
+    --main:#1b425f;
+    --sec:#c5d163;
+    --text-bg:#dfe5a7;
+    --text:#244145;
+    --shadow:#eef6c5;
+    --shadow2:#d3dcd7;
+}
+
+html{
+    margin:0;
+    padding:0;
+    width:100vw;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body{
+    margin:0;
+    padding:0;
+    width:100%;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Tajawal', sans-serif;
+    direction: rtl;
+    display:flex;
+    justify-content: center;
+    gap:20px;
+    background: conic-gradient(at 0% 0%, snow, white);
+    font-family: 'badr', sans-serif;
+    flex-wrap: wrap;
+    padding-bottom:50px;
+    padding-top:50px;
+    padding-right:5px;
+}
+
+/*********************/
+
+.hidden{
+    display:none;
+}
+
+
+.save{
+    background-color: green;
+    border-radius: 200px;
+    color:white;
+    padding:10px 40px 10px 40px;
+    cursor: pointer;
+}
+
+a{
+    cursor: pointer;
+    position: relative;
+}
+
+/*****************************/
+
+body > div{
+    flex-basis:calc(33% - 20px);
+    position: relative;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    transition: 0.6s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+body > div .fa-ellipsis-v{
+    position: absolute;
+    right:10px;
+    top:10px;
+    font-size:2rem!important;
+    background-color: white;
+    width:32px;
+    border-radius:50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding:4px;
+    z-index:2;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    cursor: pointer;
+}
+
+#header img:nth-child(1){
+    width:100%;
+    border-radius: 10px;
+}
+
+#header img:nth-child(2){
+    position: absolute;
+    right:50%;
+    top:50%;
+    transform: translate(50%,-50%);
+    height:50%;
+}
+
+.edit{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    align-items: center;
+    position: absolute;
+    justify-content: center;
+    right:50%;
+    top:50%;
+    transform: translate(50%,-50%);
+    background:conic-gradient(at 0% 0%, snow, white);
+    width:100%;
+    height:100%;
+    border-radius: 10px;
+    z-index:1;
+    transition: 0.6s;
+    opacity:0;
+    font-size:1.5rem!important;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+#header input{
+    border:1px solid gray;
+    border-radius:10px;
+}
+
+#header input{
+    font-size:0.6rem!important;
+    padding:5px;
+}
+
+#header label{
+    font-size:0.8rem!important;
+}
+
+/*************************************/
+
+input,textarea{
+    font-family: inherit;
+    text-align: center;
+    border-radius: 10px;
+    padding:10px;
+    width:50%;
+    font-size:1.5rem!important;
+}
+
+#main{
+    background:conic-gradient(from .5turn at bottom center, lightblue, white);
+}
+
+#title,#city{
+    font-size:2.5rem;
+}
+
+#main .edit{
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+
+#main .edit > div{
+    display: flex;
+    flex-direction: column;
+    flex-basis:calc(50% - 5px);
+    justify-content: center;
+    align-items: center;
+}
+
+#textarea span{
+    right:5%;
+}
+
+/***************************************/
+
+#date{
+    flex-direction: row;
+    background: conic-gradient(from 90deg at bottom right, cyan, rebeccapurple);
+    color:white;
+}
+
+#date i{
+    color: black;
+}
+
+#date > div{
+    flex-basis:25%;
+    font-size:1.5rem;
+}
+
+#date input{
+    width:50%;
+    padding:10px;
+}
+
+/***************************************/
+
+#links{
+    font-size:3rem;
+    background: conic-gradient(from .5turn at top right, darkseagreen, darkslategray);
+    color:black;
+}
+#links i{
+    color:black;
+}
+
+#links input{
+    padding:1px;
+}
+
+/*******************************/
+#info{
+    flex-basis:calc(66% - 20px);
+    background: conic-gradient(from -90deg at top left, black, white);
+}
+#info .edit > div{
+    display:flex;
+    flex-direction: column;
+    flex-basis:calc(33%);
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#textarea{
+    flex-basis:90%!important;
+    position: relative;;
+}
+
+#textarea input{
+    width:calc(90% - 20px)!important;
+}
+
+#textarea span{
+    position: absolute;
+    top:calc(100% + 30px);
+    width:90%;
+    height:fit-content;
+    background-color: black;
+    color:white;
+    z-index:-1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#textarea article{
+    position: absolute;
+    top:calc(100% - 2px);
+    width:90%;
+    height:fit-content;
+    background-color: black;
+    color:white;
+    z-index:-1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+article i{
+    border: 1px solid white;
+    border-radius:50%;
+    padding:5px;
+
+}
+
+#info .edit{
+    flex-direction: row;
+    flex-wrap:wrap;
+    gap:0;
+}
+
+/************************************/
+#colors,#phone{
+    flex-basis:calc(99% - 40px);
+    background: conic-gradient(from -90deg at bottom center, papayawhip, peachpuff);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#colors .edit,#phone .edit{
+    flex-basis:calc(99% - 40px);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding:10px;
+    align-items: center;
+}
+
+#colors .edit>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#colors input{
+    padding:0px;
+    width:40px;
+    height:40px;
+    border-radius: 0;
+}
+/*****************************************/
+
+#phone > div{
+    font-size: 2rem;
+}
+
+@media(max-width:1075px){
+    #links{
+        font-size:2rem;
+    }
+    .edit{
+        font-size:1.1rem!important;
+    }
+    #title,#city{
+        font-size:2rem;
+    }
+}
+
+@media(max-width:1030px){
+    #links{
+        font-size:1.5rem;
+    }
+    .edit{
+        font-size:0.9rem!important;
+    }
+    #title,#city{
+        font-size:1.5rem;
+    }
+}
+
+@media(max-width:887px){
+    body > div{
+        flex-basis:90%!important
+    }
+}
+
+@media(max-width:657px){
+    body > div{
+        flex-basis:90%!important
+    }
+    #phone{
+        flex-direction: column;
+    }
+    #phone > div{
+        font-size:1rem
+    }
+    h1{
+        font-size:1.3rem!important;
+        margin-bottom:0;
+    }
+}
+
+.checked{
+    color:red!important;
+  }
+
+i{
+    cursor: pointer;
+}
+

@@ -1,0 +1,348 @@
+input{
+    outline: 0;
+    border: 0;
+    font-size: inherit;
+    background-color: unset;
+    font-weight: inherit;
+    width: inherit;
+    color:inherit
+}
+
+#infoSideDiv div input{
+    width:100%
+}
+
+#infoSideDiv > div > .addSideInfo,#infoSideDiv > div > .editSideInfo{
+    position: absolute;
+    right: 50%;
+    top:100%;
+    transform: translate(50%,-50%);
+    background-color: green;
+    color:white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+#infoSideDiv > div > .editSideInfo{
+    background-color:blue;
+    cursor: pointer;
+}
+
+#infoSideDiv{
+    gap:12px;
+}
+
+#infoSideDiv > div > .deleteSideInfo,#infoSideDiv > div > .enableSideInfo,#infoSideDiv > div > .disableSideInfo{
+    position: absolute;
+    left: 0;
+    top:0;
+    transform: translate(50%,-50%);
+    background-color: #a70000;
+    color:white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#infoSideDiv{
+    padding-top: 15px;
+}
+
+#infoSideDiv > div > i{
+    cursor: pointer;
+    left: 0;
+    transform: translate(0%,-50%);
+    right: unset;
+}
+
+.footer{
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.footerRight{
+    width: 71%;
+}
+
+#infoSideDiv > div > .enableSideInfo{
+    color:green
+}
+
+#save{
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translate(39%,-50%) rotate(270deg);
+    background-color: green;
+    color: white;
+    padding: 5px 15px;
+    z-index: 999;
+    font-size: 2rem;
+    border-radius: 6px;
+}
+
+.footerLeft > i{
+    position: absolute;
+    font-size: 2em;
+    right:0;
+    top:0;
+    transform: translate(50%,-50%);
+}
+
+/****************************************/
+input[type="color" i] {
+    appearance: auto;
+    width: 50px;
+    height: 27px;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: buttonface;
+    color: buttontext;
+    border-width: 1px;
+    border-style: solid;
+    border-color: buttonborder;
+    border-image: initial;
+    padding: 1px 2px;
+}
+
+body input[type=range] {
+    width: 100px; 
+}
+body #main {
+    z-index: 9999999;
+    width: fit-content;
+    padding: 5px;
+    margin-bottom: 20px;
+    background-color: white;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    transition-duration: 0.6s;
+    animation: 0.6s ease-out 0s 1 slideInFromTop; 
+    background: var(--background);
+    box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
+    backdrop-filter: blur(19.7px);
+    -webkit-backdrop-filter: blur(19.7px);
+    border: 1px solid var(--border-color);
+    border-top: 0;
+    right: 0;
+    top:0;
+}
+
+body > main:after{
+    display: none;
+}
+
+body #main .body {
+    display: flex; 
+}
+
+body #main .body .color {
+    width: 50%;
+    text-align: center; 
+}
+
+body #main #direction-input {
+    text-align: center;
+    margin-bottom: 0; 
+}
+
+body #main .directions-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 0;
+}
+
+body #main .directions-container .direction {
+    cursor: pointer;
+    border: 1px solid gray;
+    border-radius: 5px; 
+}
+
+body #main .directions-container .direction:hover {
+    background-color: #E3EAFF;
+    transition: 0.2s; 
+}
+/***************************************************/
+
+#mapDiv {
+    position: relative;
+}
+
+#mapDiv > article{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    justify-content: center;
+    gap:10px;
+    top:0;
+    right: 50%;
+    transform: translate(50%,-50%);
+    z-index: 99999999999999;
+    white-space: nowrap;
+    flex-wrap: wrap;
+}
+
+#mapDiv > article > span{
+    color:white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.red{
+    background-color: #a70000;
+}
+
+.green{
+    background-color: green;
+}
+
+img+input{
+    cursor: pointer;
+}
+
+.footerRight > div:not(.footerRight > div:nth-child(1),.footerRight > div:nth-child(2),.footerRight > div:nth-child(3),.footerRight > div:nth-child(4)){
+    display: none;
+}
+
+.footerRight > div:nth-child(4){
+    display: flex!important;
+}
+
+@media(max-width:960px){
+    .footerRight > div:nth-child(4){
+        display: none!important;
+    }
+    .footerRight > div:nth-child(3){
+        display: flex!important;
+    }
+    #mapDiv #mapTitles{
+        padding: 18px 30px 30px 20px;
+    }
+}
+
+@media(max-width:584px){
+    .footerRight > div:nth-child(3){
+        display: none!important;
+    }
+    .footerRight > div:nth-child(2){
+        display: flex!important;
+    }
+    .footerRight > div{
+        font-size: 1.1em;
+        border: 0;
+    }
+    #mapDiv .swal2-icon {
+        margin: 0 auto;
+    }
+    #mapDiv .swal2-popup{
+        padding: 0;
+    }
+    #mapDiv #mapTitles{
+        font-size: 0.95em;
+    }
+}
+
+@media(max-width:1166px){
+    .footerRight{
+        margin-top: 90px;
+    }
+    #main{
+        top:calc(100% - 4px)!important
+    }
+    #infoSideDiv{
+        margin-top: 93px;
+    }
+}
+
+@media(max-width:743px){
+    #bidderInfo{
+        flex-direction: column!important;
+    }
+    .footerRight{
+        margin-top: 140px;
+    }
+}
+
+.footerRight > div > .delete{
+    position: absolute;
+    left: -20px;
+    top: 0;
+    transform: translate(50%,-50%);
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#infoSideDiv{
+    overflow: visible scroll;
+}
+
+.rightSection nav h1 input,.rightSection nav h2 input{
+    width: 100%;
+}
+
+#slidersControl{
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    left: 100%;
+    top:0;
+    display: flex;
+    flex-direction: column;
+    gap:2px;
+    overflow: visible scroll;
+}
+
+#slidersControl > div{
+    width: 100%;
+    aspect-ratio: 1/1;
+    border:1px solid var(--border-color);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#slidersControl > div > img{
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+
+#slidersControl input{
+    width: 100%;
+    height: 100%;
+}
+
+#slidersControl .deleteSlider{
+    position: absolute;
+    top:0;
+    right: 0;
+    background-color: #a70000;
+    padding: 2px 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    color:white
+}
+
+body>main{
+    padding-right: 151px!important;
+}
+
+#mode{
+    position: absolute;
+    left:5px;
+    bottom: 0;
+    z-index: 99999999999999999;
+    background-color: white;
+    height: fit-content!important;
+}
