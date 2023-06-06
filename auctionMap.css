@@ -159,13 +159,13 @@ svg:not(.svgNot){
 
 @media(min-width:1500px){
     .footerRight > div:not(.footerRight > div:nth-child(1),.footerRight > div:nth-child(2),.footerRight > div:nth-child(3),.footerRight > div:nth-child(4)){
-        display: none;
+        display: none!important;
     }
 }
 
 @media only screen and (max-width: 1500px) and (min-width: 1000px){
     .footerRight > div:not(.footerRight > div:nth-child(1),.footerRight > div:nth-child(2),.footerRight > div:nth-child(3)){
-        display: none;
+        display: none!important;
     }
     .bid-user{
         flex-basis: calc(33.33% - 10px);
@@ -174,7 +174,7 @@ svg:not(.svgNot){
 
 @media(max-width:1000px){
     .footerRight > div:not(.footerRight > div:nth-child(1),.footerRight > div:nth-child(2)){
-        display: none;
+        display: none!important;
     }
     .bid-user{
         flex-basis: calc(50% - 10px);
