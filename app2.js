@@ -449,7 +449,14 @@
                             body: JSON.stringify(data)
                         })
                         .then(()=>{
-                            location.reload()
+                            document.querySelector(".image-mapper-svg").addEventListener("wheel", (event) => {
+                                event.preventDefault();
+                                const scaleFactor = Math.max(0.2, Math.min(scale + (event.deltaY * -0.001 * scale), 6));
+                                scale = scaleFactor;
+                                document.querySelector(".image-mapper-img").style.transform = `scale(${scale})`;
+                                document.querySelector(".image-mapper-svg").style.transform = `scale(${scale})`;
+                                document.querySelector(".image-mapper-img").scrollIntoView({block: 'center', inline: 'center' })
+                            });
                         })
                     }),
                         c ? d.readAsArrayBuffer(c) : a("#image-map").imageMapper("update", { src: "", file: "" });
